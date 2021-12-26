@@ -1,4 +1,5 @@
 import runningGif from './assets/running.gif';
+import DEADGif from './assets/DEAD.gif';
 import './App.css';
 import React, { useState } from 'react';
 
@@ -34,13 +35,13 @@ function App() {
           <p>
             This is some more text explaining that story
           </p>
-          <button onClick={() => {setNode("kill them")}}>
-            kill them
+          <button onClick={() => {setNode("DEAD")}}>
+            Phone
           </button>
-          <button onClick={() => {setNode("eat them")}}>
+          <button onClick={() => {setNode("Story Branch 2")}}>
             eat them
           </button>
-          <button onClick={() => {setNode("push them")}}>
+          <button onClick={() => {setNode("Story Branch 3")}}>
             push them
           </button>
         </div>
@@ -48,58 +49,48 @@ function App() {
       </div>
     )
   }
-
-  if (node === "kill them") {
+  if (node === "Phone") {
     return (
       <div className="App">
         <header className="App-header">
         <img src={runningGif} alt="logo" />
         <div className="StoryText">
-          <h2>You killed them</h2>
+          <h2>Title</h2>
           <p>
-            Sorry now you're arrested
+            Wow u chose the phone? who u gonna call ur proud mama?.
           </p>
-          <button onClick={() => {setNode("option 1")}}>
-            option 1
+          <button onClick={() => {setNode("Story Branch 1")}}>
+            kill them
           </button>
-          <button onClick={() => {setNode("option 2")}}>
-            option 2
+          <button onClick={() => {setNode("Story Branch 2")}}>
+            eat them
           </button>
-          <button onClick={() => {setNode("option 3")}}>
-            option 3
+          <button onClick={() => {setNode("Story Branch 3")}}>
+            push them
           </button>
         </div>
         </header>
       </div>
     )
   }
-
-  if (node === "eat them") {
+  if (node === "DEAD") {
     return (
       <div className="App">
         <header className="App-header">
-        <img src={runningGif} alt="logo" />
+        <img src={DEADGif} alt="logo" />
         <div className="StoryText">
-          <h2>You ate them</h2>
+          <h2>HAH U DIED</h2>
           <p>
-            Sorry now you're a cannibal
+            You died, would you like to restart?
           </p>
-          <button onClick={() => {setNode("option 1")}}>
-            option 1
-          </button>
-          <button onClick={() => {setNode("option 2")}}>
-            option 2
-          </button>
-          <button onClick={() => {setNode("option 3")}}>
-            option 3
+          <button onClick={() => {setNode("start")}}>
+          restart
           </button>
         </div>
         </header>
       </div>
     )
   }
-
-
 }
 
 export default App;
